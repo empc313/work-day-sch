@@ -1,7 +1,7 @@
 var past = document.querySelector(".row time-block past");
 var currentDay = document.getElementById("#currentDay");
 
-//logging date to console in the format of year month day
+//logging date to console in the format of year,month,day
 var date = new Date().toJSON().slice(0, 10);
 console.log(date);
 
