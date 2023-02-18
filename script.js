@@ -1,16 +1,20 @@
 var past = document.querySelector(".row time-block past");
 
-
 var d = new Date();
 var year = d.getFullYear();
 var month = d.getMonth() + 1;
 var day = d.getDate();
 
 var totalDays = new Date(year, month, 0).getDate();
-var output = (day < 10 ? "0" : "") + day + "/" + 
-(month<10 ? '0' : '') + month + '/' + year
+var output =
+  (day < 10 ? "0" : "") +
+  day +
+  "/" +
+  (month < 10 ? "0" : "") +
+  month +
+  "/" +
+  year;
 console.log(year);
-
 
 //$('.today').text('${new Date}')
 
