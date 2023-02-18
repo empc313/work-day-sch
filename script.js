@@ -1,6 +1,20 @@
+var past = document.querySelector(".row time-block past");
+
+var d = new Date();
+var year = d.getFullYear();
+var month = d.getMonth() + 1;
+var day = d.getDate();
+
+var totalDays = new Date(year, month, 0).getDate();
+var output = (day < 10 ? "0" : "") + day + "/" + year;
+console.log(totalDays);
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
+//(".inner").wrapAll("<div class="row time-block past/>");
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
