@@ -6,8 +6,9 @@ var month = d.getMonth() + 1;
 var day = d.getDate();
 
 var totalDays = new Date(year, month, 0).getDate();
-var output = (day < 10 ? "0" : "") + day + "/" + year;
-console.log(totalDays);
+var output = (day < 10 ? "0" : "") + day + "/" + 
+(month<10 ? '0' : '') + month + '/' + year
+console.log(year);
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
