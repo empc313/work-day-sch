@@ -1,13 +1,12 @@
 var past = document.querySelector(".row time-block past");
-
 var currentDay = document.getElementById("#currentDay");
 
-var currentDay = new Date().toJSON().slice(0,10)
-console.log(currentDay);
+//logging date to console in the format of year month day
+var date = new Date().toJSON().slice(0, 10);
+console.log(date);
 
-
-
-$('.currentDay').text('${output}')
+//Dispalying current date on website
+$("#currentDay").append(($var = date));
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
