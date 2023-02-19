@@ -67,17 +67,15 @@ var eventText;
   $(".saveBtn").click(function(){
   eventText = $(this).siblings(".description").val();
   console.log(eventText);
-  timeNow = $(this).siblings(".time-block").text();
-  console.log(timeNow)
   localStorage.setItem(timeNow, JSON.stringify(eventText));
-  saveText();
+
 })
 
 //function saveText (){
 //  var saveEvent9 = JSON.parse(localStorage.getItem("9AM"));
  // $("#9").val("");
 ////  $("#9").val(saveEvent9);
-}
+
 
 $(function () {});
 
