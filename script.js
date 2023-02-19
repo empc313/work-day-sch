@@ -1,10 +1,12 @@
 var past = document.querySelector(".row time-block past");
+var present = document.getElementById;
+var future;
 var currentDay = document.getElementById("#currentDay");
+var container = document.getElementById("#container");
+var hourNine = document.getElementById("#hour-9");
 
-//logging date to console in the format of year,month,day
-var date = new Date().toJSON().slice(0, 10);
+var date = new Date();
 console.log(date);
-
 //Dispalying current date on website
 $("#currentDay").append(($var = date));
 
@@ -12,7 +14,7 @@ $("#currentDay").append(($var = date));
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-//(".inner").wrapAll("<div class="row time-block past/>");
+$(".container-fluid px-5").wrapAll("<div class='container'/>");
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
@@ -26,7 +28,8 @@ $(function () {
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
+  // current hour in 24-hour time
+  //$(".hour-9").append('present');
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
