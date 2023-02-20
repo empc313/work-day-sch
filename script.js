@@ -24,19 +24,7 @@ var date = new Date();
 console.log(date);
 $("#currentDay").append(($var = date));
 
-// TODO: Add a listener for click events on the save button. This code should
-// use the id in the containing time-block as a key to save the user input in
-// local storage. HINT: What does `this` reference in the click listener
-// function? How can DOM traversal be used to get the "hour-x" id of the
-// time-block containing the button that was clicked? How might the id be
-// useful when saving the description in local storage?
-
-// TODO: Add code to apply the past, present, or future class to each time
-// block by comparing the id to the current hour. HINTS: How can the id
-// attribute of each time-block be used to conditionally add or remove the
-// past, present, and future classes? How can Day.js be used to get the
-// current hour in 24-hour time
-//$(".hour-9").append('present');
+// code to apply the past, present, or future class to each time
 
 var currentTime =
   date.getHours();
@@ -72,33 +60,21 @@ var currentTime = dayjs().hour();
     }
   });
 
-  function initPage() {
-    $("#hour-9 .description").val(localStorage.getItem("9AM"));
-  };
-    
-// TODO: Add code to get any user input that was saved in localStorage and set
-var saveBtn = document.querySelector(".saveBtn");
-var textblock = document.querySelector(".time-block");
-
  
-
+    
+//code to get any user input that was saved in localStorage 
 
 var eventText =
 $(".saveBtn").click(function () {
  var currentTime = $(this).siblings(".description").val();
  console.log(currentTime);
- localStorage.setItem(currentTime, JSON.stringify(eventText));
+ localStorage.getItem(currentTime, JSON.stringify(eventText));
 });
+localStorage.setItem("currentDay", JSON.stringify(currentDay));
+if (currentDay == null) {
+  currentDay= []}
+  
 
-//function saveText (){
-//  var saveEvent9 = JSON.parse(localStorage.getItem("9AM"));
-// $("#9").val("");
-////  $("#9").val(saveEvent9);
 
-$(function () {});
 
-//
-// TODO: Add code to get any user input that was saved in localStorage and set
-// the values of the corresponding textarea elements. HINT: How can the id
-// attribute of each time-block be used to do this?
-//
+
