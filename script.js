@@ -1,9 +1,18 @@
 var currentDay = document.getElementById("#currentDay");
 var container = document.getElementById("#container");
-var hourNine = document.getElementById("#hour-9");
 var saveBtn = document.getElementById(".saveBtn");
 var timeBlock = document.getElementById(".time-block");
 var hour = document.getElementById(".hour");
+
+var hourNine = document.getElementById("#hour-9");
+var hourTen = document.getElementById("#hour-10");
+var hourEle = document.getElementById("#hour-11");
+var hourTwe = document.getElementById("#hour-12");
+var hourOne = document.getElementById("#hour-13");
+var hourTwo = document.getElementById("#hour-14");
+var hourThree = document.getElementById("#hour-15");
+var hourFour = document.getElementById("#hour-16");
+var hourFive = document.querySelector("#hour-17");
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
@@ -30,13 +39,17 @@ $("#currentDay").append(($var = date));
 //$(".hour-9").append('present');
 
 var currentTime =
-  date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+  date.getHours();
 console.log(currentTime);
 
-function classChange() {
+
+var currentTime = dayjs().hour();
+//.each functionally
+
+
   //current time
   //run through each time block
-  $(".description").each(function () {
+  $(".time-block").each(function () {
     var timeBlock = parseInt($(this).attr("id"));
 
     //add and remove classes based off of if time is less than now
@@ -58,17 +71,31 @@ function classChange() {
       $(this).removeClass(".past");
     }
   });
-}
 
+  function initPage() {
+    $("#hour-9 .description").val(localStorage.getItem("9AM"));
+  };
+    
 // TODO: Add code to get any user input that was saved in localStorage and set
+var saveBtn = document.querySelector(".saveBtn");
+var textblock = document.querySelector(".time-block");
+
+ 
+
 
 var eventText;
 $(".saveBtn").click(function () {
-  eventText = $(this).siblings(".description").val();
-  console.log(eventText);
-  localStorage.setItem(currentTime, JSON.stringify(eventText));
+ var currentTime = $(this).siblings(".description").val();
+ console.log(currentTime);
+ localStorage.setItem(currentTime, JSON.stringify(eventText));
 });
 
+
+$(".saveBtn").click(function initPage() {
+  var currentTime = $(this).siblings(".hour").text();
+var localPlan = $(this).siblings(".description").val();
+localStorage.setItem
+});
 //function saveText (){
 //  var saveEvent9 = JSON.parse(localStorage.getItem("9AM"));
 // $("#9").val("");
