@@ -83,19 +83,13 @@ var textblock = document.querySelector(".time-block");
  
 
 
-var eventText;
+var eventText =
 $(".saveBtn").click(function () {
  var currentTime = $(this).siblings(".description").val();
  console.log(currentTime);
  localStorage.setItem(currentTime, JSON.stringify(eventText));
 });
 
-
-$(".saveBtn").click(function initPage() {
-  var currentTime = $(this).siblings(".hour").text();
-var localPlan = $(this).siblings(".description").val();
-localStorage.setItem
-});
 //function saveText (){
 //  var saveEvent9 = JSON.parse(localStorage.getItem("9AM"));
 // $("#9").val("");
